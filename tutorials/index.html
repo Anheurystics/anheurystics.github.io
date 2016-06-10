@@ -1,0 +1,41 @@
+    <!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="shortcut icon" href="../images/dnlg-icon.ico">
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.color-2.1.2.min.js"></script>
+    <script>
+	$(document).ready(function () {
+		$('.navlink').hover(function () {
+			$(this).animate({
+				color: 'white'
+			}, 150);
+		}, function () {
+			$(this).animate({
+				color: 'black'
+			}, 150);
+		});
+	});
+	</script>
+    <title>Anheurystics - Tutorials</title>
+</head>
+<body>
+    <img src="../images/banner_tutorials.png" id="banner">
+    <div style="text-align:center;">
+        <navbar>
+            <a href="../" class="navlink" > ./home </a>
+            <a href="../games" class="navlink"> ./games </a>
+            <a href="" class="navlink"> ./tutorials </a>
+        </navbar>
+    </div>
+    <div style="width: 80%; display: block; margin: 0 auto;">
+    <div class="intro_header">Miscellaneous Tutorials</div>
+    <div class="intro_body" style="margin: 10px;">
+        <ol>
+            <a href="parallax"><li>Parallax Background Scrolling in Video Games</li></a>
+        </ol>
+    </div>
+    </div>
+</body>
+</html>
