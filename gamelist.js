@@ -10,7 +10,7 @@ gamelist = [
 	{
 		"title": "Primary Run",
 		"img": "primaryrun",
-		"desc": "Primary Run is a third person puzzle game with the goal of getting everyone to the exit. Made for the 2014 Global Game Jam with a couple of friends. I did most of the programming",
+		"desc": "Primary Run is a third person puzzle game with the goal of getting everyone to the exit. Made for Global Game Jam 2014.",
 		"links": {
 			"Global Game Jam Page": "http://globalgamejam.org/2014/games/primary-run"
 		}
@@ -18,7 +18,7 @@ gamelist = [
 	{
 		"title": "Logic Invaders",
 		"img": "logicinvaders",
-		"desc": "Logic Invaders is a Space Invader clone using the mechanics of logic gates (AND, OR, etc.). Made for a school project. I did the programming.",
+		"desc": "Logic Invaders is a Space Invader clone using the mechanics of logic gates (AND, OR, etc.). Made for a school project.",
 		"links": {
 			"Kongregate": "http://www.kongregate.com/games/will1008/logic-invaders"
 		}
@@ -90,7 +90,7 @@ gamelist = [
 	{
 		"title": "End Game+",
 		"img": "endgameplus",
-		"desc": "End Game+ is our entry to the 2015 Global Game Jam that deals with the idea of a life after the boss fight. Made with a couple of friends, and I did the programming",
+		"desc": "End Game+ is a game that deals with the idea of a life after the boss fight. Made for Global Game Jam 2015",
 		"links": {
 			"Global Game Jam Page": "http://globalgamejam.org/2015/games/end-game"
 		}
@@ -106,7 +106,7 @@ gamelist = [
 	{
 		"title": "Voxel Populus",
 		"img": "voxelpopulus",
-		"desc": "Voxel Populus is a block-building sandbox game I made for a local hackathon (YouthHack Code Weekend)",
+		"desc": "Voxel Populus is a block-building sandbox game made for a local hackathon, YouthHack Code Weekend",
 		"links": {
 			"GitHub": "http://github.com/Anheurystics/VoxelPopulus"
 		}
@@ -114,7 +114,7 @@ gamelist = [
 	{
 		"title": "Our Dark Lord (is Better than Yours)",
 		"img": "ourdarklord",
-		"desc": "Our Dark Lord... is a competitive PvP game, in which cults race to summon their demon before everyone else. Made for Global Gam Jam 2016.",
+		"desc": "Our Dark Lord (is Better than Yours) is a competitive PvP game, in which cults race to summon their demon before everyone else. Made for Global Gam Jam 2016.",
 		"links": {
 			"Global Game Jam Page": "http://globalgamejam.org/2016/games/our-dark-lord-better-yours"
 		}
