@@ -1,14 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 body {
-	background-color: rgb(152, 206, 237);
-}
-#banner {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 128px;
-	height: 128px;
-	image-rendering: pixelated;
+	background-color: #ffffff;
 }
 #intro {
 	display: block;
@@ -26,7 +18,7 @@ body {
 .intro_body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
-	background-color: #D3E2EA;
+	background-color: #ffffff;
 	padding: 12px;
 }
 navbar {
@@ -60,12 +52,12 @@ navbar {
 	height: 207px;
 	margin: 0 0 0px 0;
 	padding: 20px 20px 20px 20px;
-	background-color: #D3E2EA;
+	background-color: #ffffff;
 	float: left;
 }
 .game_img {
 	width: 360px;
-	height: 203px margin: 8px 16px 8px 8px;
+	height: 203px;
 	border: 2px solid #000000;
 	border-spacing: inherit;
 	line-height: 0;

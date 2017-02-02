@@ -1,45 +1,138 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="shortcut icon" href="images/dnlg-icon.ico">
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery.color-2.1.2.min.js"></script>
-    <script>
-	$(document).ready(function () {
-		$('.navlink').hover(function () {
-			$(this).animate({
-				color: 'white'
-			}, 150);
-		}, function () {
-			$(this).animate({
-				color: 'black'
-			}, 150);
+	<title>Anheurystics - Games</title>
+	
+	<link rel="shortcut icon" href="../images/dnlg-icon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	
+	<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.color-2.1.2.min.js"></script>
+	<script type="text/javascript" src="gamelist.js"></script>
+	
+	<script>
+		$(document).ready(function() {
+			$('.navlink').hover(function () {
+				$(this).animate({
+					color: 'white'
+				}, 150);
+			}, function () {
+				$(this).animate({
+					color: 'black'
+				}, 150);
+			});
+
+			$(document).on('mouseenter', '.game', function () {
+				if ($(this).find('.game_bar').data('state') != 2) {
+					$(this).find('.game_img').fadeTo('fast', 1.0);
+					$(this).find('.game_links').fadeTo('fast', 1.0);
+				}
+			});
+
+			$(document).on('mouseleave', '.game', function () {
+				if ($(this).find('.game_bar').data('state') != 2) {
+					$(this).find('.game_img').fadeTo('fast', 0.5);
+					$(this).find('.game_links').fadeTo('fast', 0.5);
+				}
+			});
 		});
-	});
+	
+		var images = [];
+		var json = JSON.parse(JSON.stringify(gamelist));
+		
+		for(var i = 0; i < json.length; i++) {
+			var name = json[i].img;
+			images[name] = new Image();
+			images[name].src = "../images/" + name + "_cover.png";
+		}
+
+		function loadGames() {
+			var games = document.getElementById("games");
+			for (var i = 0; i < json.length; i++) {
+				var game = json[i];
+				var div_game = document.createElement("div");
+				div_game.className = "game";
+
+				var div_bar = document.createElement("div");
+				div_bar.className = "game_bar";
+
+				var div_img = document.createElement("div");
+				div_img.className = "game_img";
+				div_img.appendChild(images[game.img]);
+
+				var div_content = document.createElement("div");
+				div_content.className = "game_content";
+
+				var div_info = document.createElement("div");
+				div_info.className = "game_info";
+				var b_title = document.createElement("b");
+				b_title.className = "game_title";
+				b_title.innerHTML = game.title;
+				var p_desc = document.createElement("p");
+				p_desc.classNAME = "game_desc";
+
+				var desc = game.desc;
+				if (game.desc_links != undefined) {
+					for (var j = 0; j < Object.keys(game.desc_links).length; j++) {
+						var key = Object.keys(game.desc_links)[j];
+						var ind = desc.indexOf(key);
+						var p1 = desc.substr(0, ind);
+						var p2 = desc.substr(ind, key.length);
+						var p3 = desc.substr(ind + key.length);
+
+						desc = p1 + "<a href='" + game.desc_links[key] + "' class='desc_link'>" + p2 + "</a>" + p3;
+					}
+				}
+
+				p_desc.innerHTML = desc;
+
+				var div_links = document.createElement("div");
+				div_links.className = "game_links";
+				div_info.appendChild(b_title);
+				div_info.appendChild(p_desc);
+				div_info.appendChild(div_links);
+
+				for (var j = 0; j < Object.keys(game.links).length; j++) {
+					var key = Object.keys(game.links)[j];
+					var a = document.createElement("a");
+					a.setAttribute("href", game.links[key]);
+					a.innerHTML = key;
+					div_links.appendChild(a);
+					if (j + 1 < Object.keys(game.links).length) {
+						div_links.appendChild(document.createTextNode(String.fromCharCode(160)));
+						div_links.appendChild(document.createTextNode(String.fromCharCode(160)));
+						div_links.appendChild(document.createTextNode(String.fromCharCode(160)));
+					}
+				}
+
+				div_content.appendChild(div_img);
+				div_content.appendChild(div_info);
+				div_game.appendChild(div_content);
+				games.appendChild(div_game);
+			}
+		}
+
+		window.onload = loadGames;
 	</script>
-    <title>Anheurystics</title>
 </head>
+
 <body>
-    <img src="images/banner_home.png" id="banner">
-    <div style="text-align:center;">
-        <navbar>
-            <a href="" class="navlink" > ./home </a>
-            <a href="games" class="navlink"> ./games </a>
-            <a href="tutorials" class="navlink"> ./tutorials </a>
-        </navbar>
-    </div>
-    
     <div id ="intro">
         <div class="intro_header">Welcome</div>
         <div class="intro_body">
-            This small website contains links to all the games and prototypes I have worked on. This is also where I post my tutorials.     As always, everything is a work in progress. 
+            This small website contains links to all the games and prototypes I have worked on.
         </div>
         
         <div class="intro_header">About Me</div>
         <div class="intro_body">
-            I make games as a hobby, but I consider myself a game programmer above everything else. I usually participate in game jams.
+            I'm a hobbyist game developer, graphics programmer, and web developer.
         </div>
     </div>
+
+	<div id="games">
+        <div class="intro_header">Games</div>
+	</div>
 </body>
+
 </html>
