@@ -100,8 +100,7 @@ gamelist = [
 		"img": "bakersdozen",
 		"desc": "Baker's Dozen is a top down action shooter about shooting cookies at robots. Made for Ludum Dare 32, with the theme of \"An Unconventional Weapon\".",
 		"links": {
-			"Ludum Dare page": "http://ludumdare.com/compo/ludum-dare-32/?action=preview&uid=26198",
-			"This Site": "ld32"
+			"Ludum Dare page": "http://ludumdare.com/compo/ludum-dare-32/?action=preview&uid=26198"
 		}
 	},
 	{
@@ -109,7 +108,7 @@ gamelist = [
 		"img": "voxelpopulus",
 		"desc": "Voxel Populus is a block-building sandbox game I made for a local hackathon (YouthHack Code Weekend)",
 		"links": {
-			"This Site": "../VoxelPopulus"
+			"GitHub": "http://github.com/Anheurystics/VoxelPopulus"
 		}
 	},
 	{
