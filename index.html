@@ -44,7 +44,6 @@
 		for(var i = 0; i < json.length; i++) {
 			var name = json[i].img;
 			images[name] = new Image();
-			images[name].src = "../images/" + name + "_cover.png";
 		}
 
 		function loadGames() {
@@ -57,6 +56,7 @@
 				var div_img = document.createElement("div");
 				div_img.className = "game_img";
 				div_img.appendChild(images[game.img]);
+				images[game.img].src = "../images/" + game.img + "_cover.png";
 
 				var div_content = document.createElement("div");
 				div_content.className = "game_content";
