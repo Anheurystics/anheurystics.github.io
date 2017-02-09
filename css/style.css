@@ -4,83 +4,57 @@ body {
 }
 #intro {
 	display: block;
-	width: 800px;
-	margin-top: 32px;
 	margin-left: auto;
 	margin-right: auto;
+	margin: 1em;
 }
 .intro_header {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: bold;
-	font-size: 32px;
-	margin-top: 48px;
+	font-size: 2em;
 }
 .intro_body {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 20px;
+	font-size: 1.5em;
 	background-color: #ffffff;
-	padding: 12px;
 }
 navbar {
 	display: inline-block;
-	margin-top: 20px;
-}
-.navlink {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 32px;
-	font-weight: 600;
-	color: #000000;
-	text-decoration: none;
-	margin-left: 20px;
-	margin-right: 20px;
 }
 #games {
-	width: 800px;
-	height: 100%;
-	margin-top: 32px;
 	margin-left: auto;
 	margin-right: auto;
+	overflow: hidden;
+	margin: 1em;
 }
-
 .game {
-	width: 840px;
-	margin: 8px 0 8px 0;
-	float: left;
+	overflow: hidden;
+	margin: 1em 0 1em 0;
 }
 .game_content {
-	width: 800px;
-	height: 207px;
-	margin: 0 0 0px 0;
-	padding: 20px 20px 20px 20px;
 	background-color: #ffffff;
 	float: left;
 }
 .game_img {
-	width: 360px;
-	height: 203px;
-	border: 2px solid #000000;
 	border-spacing: inherit;
 	line-height: 0;
 	opacity: 0.5;
 	float: left;
+	margin-right: 1em;
 }
 .game_info {
-	margin: 0px 16px 0px 16px;
-	width: 380px;
-	float: left;
-	text-align: left;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 18px;
-	height: 207px;
+	font-size: 1.2em;
 }
 .game_title {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 24px;
+	font-size: 1.2em;
 	color: #000000;
 }
 .game_desc {
-	font-size: 16px;
+	font-size: 1em;
 	color: #000000;
+	word-wrap: break-word;
 }
 .desc_link {
 	color: #000000;

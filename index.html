@@ -54,9 +54,6 @@
 				var div_game = document.createElement("div");
 				div_game.className = "game";
 
-				var div_bar = document.createElement("div");
-				div_bar.className = "game_bar";
-
 				var div_img = document.createElement("div");
 				div_img.className = "game_img";
 				div_img.appendChild(images[game.img]);
@@ -70,7 +67,7 @@
 				b_title.className = "game_title";
 				b_title.innerHTML = game.title;
 				var p_desc = document.createElement("p");
-				p_desc.classNAME = "game_desc";
+				p_desc.className = "game_desc";
 
 				var desc = game.desc;
 				if (game.desc_links != undefined) {
@@ -98,6 +95,7 @@
 					var a = document.createElement("a");
 					a.setAttribute("href", game.links[key]);
 					a.innerHTML = key;
+					div_links.appendChild(document.createTextNode("Links: "));
 					div_links.appendChild(a);
 					if (j + 1 < Object.keys(game.links).length) {
 						div_links.appendChild(document.createTextNode(String.fromCharCode(160)));
@@ -109,6 +107,7 @@
 				div_content.appendChild(div_img);
 				div_content.appendChild(div_info);
 				div_game.appendChild(div_content);
+				games.appendChild(document.createElement("hr"));
 				games.appendChild(div_game);
 			}
 		}
@@ -119,7 +118,7 @@
 
 <body>
     <div id ="intro">
-        <div class="intro_header">Welcome</div>
+        <div class="intro_header">Anheurystics' Portfolio</div>
         <div class="intro_body">
             This small website contains links to all the games and prototypes I have worked on.
         </div>
