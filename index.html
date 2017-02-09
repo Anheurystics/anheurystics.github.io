@@ -11,33 +11,7 @@
 	<script type="text/javascript" src="../js/jquery.color-2.1.2.min.js"></script>
 	<script type="text/javascript" src="gamelist.js"></script>
 	
-	<script>
-		$(document).ready(function() {
-			$('.navlink').hover(function () {
-				$(this).animate({
-					color: 'white'
-				}, 150);
-			}, function () {
-				$(this).animate({
-					color: 'black'
-				}, 150);
-			});
-
-			$(document).on('mouseenter', '.game', function () {
-				if ($(this).find('.game_bar').data('state') != 2) {
-					$(this).find('.game_img').fadeTo('fast', 1.0);
-					$(this).find('.game_links').fadeTo('fast', 1.0);
-				}
-			});
-
-			$(document).on('mouseleave', '.game', function () {
-				if ($(this).find('.game_bar').data('state') != 2) {
-					$(this).find('.game_img').fadeTo('fast', 0.5);
-					$(this).find('.game_links').fadeTo('fast', 0.5);
-				}
-			});
-		});
-	
+	<script>	
 		var images = [];
 		var json = JSON.parse(JSON.stringify(gamelist));
 		
