@@ -34,6 +34,7 @@ navbar {
 .game_content {
 	background-color: #ffffff;
 	float: left;
+		width: 100%;
 }
 .game_img {
 	border-spacing: inherit;
