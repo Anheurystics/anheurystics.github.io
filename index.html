@@ -86,16 +86,13 @@
 
 				var div_links = document.createElement("div");
 				div_links.className = "game_links";
-				div_info.appendChild(b_title);
-				div_info.appendChild(p_desc);
-				div_info.appendChild(div_links);
 
+				div_links.appendChild(document.createTextNode("Links: "));
 				for (var j = 0; j < Object.keys(game.links).length; j++) {
 					var key = Object.keys(game.links)[j];
 					var a = document.createElement("a");
 					a.setAttribute("href", game.links[key]);
 					a.innerHTML = key;
-					div_links.appendChild(document.createTextNode("Links: "));
 					div_links.appendChild(a);
 					if (j + 1 < Object.keys(game.links).length) {
 						div_links.appendChild(document.createTextNode(String.fromCharCode(160)));
@@ -103,6 +100,10 @@
 						div_links.appendChild(document.createTextNode(String.fromCharCode(160)));
 					}
 				}
+
+				div_info.appendChild(b_title);
+				div_info.appendChild(p_desc);
+				div_info.appendChild(div_links);
 
 				div_content.appendChild(div_img);
 				div_content.appendChild(div_info);
