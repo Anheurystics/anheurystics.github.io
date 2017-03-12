@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400');
 body {
 	background-color: #ffffff;
 }
@@ -7,6 +7,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	margin: 1em;
+	font-weight: 300;
 }
 .intro_header {
 	font-family: 'Open Sans', sans-serif;
@@ -45,6 +46,7 @@ navbar {
 .game_info {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.2em;
+	font-weight: 300;
 }
 .game_title {
 	font-family: 'Open Sans', sans-serif;
