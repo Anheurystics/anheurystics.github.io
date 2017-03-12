@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,350,400');
 body {
 	background-color: #ffffff;
 }
@@ -11,7 +11,7 @@ body {
 }
 .intro_header {
 	font-family: 'Open Sans', sans-serif;
-	font-weight: bold;
+	font-weight: 400;
 	font-size: 2em;
 }
 .intro_body {
@@ -51,6 +51,7 @@ navbar {
 .game_title {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.2em;
+	font-weight: 400;
 	color: #000000;
 }
 .game_desc {
@@ -68,7 +69,7 @@ navbar {
 	color: #000000;
 }
 .game_links {
-
+		
 }
 a:link:not(.navlink) {
 	font-weight: bold;
