@@ -3,106 +3,162 @@
 
 <head>
 	<title>Anheurystics</title>
-	
+
 	<link rel="shortcut icon" href="images/dnlg-icon.ico">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="gamelist.js"></script>
-	
-	<script>	
-		var images = [];
-		var json = JSON.parse(JSON.stringify(gamelist));
-		
-		for(var i = 0; i < json.length; i++) {
-			var name = json[i].img;
-			images[name] = new Image();
-		}
-
-		function loadGames() {
-			var games = document.getElementById("games");
-			for (var i = 0; i < json.length; i++) {
-				var game = json[i];
-				var div_game = document.createElement("div");
-				div_game.className = "game";
-
-				var div_img = document.createElement("div");
-				div_img.className = "game_img";
-				div_img.appendChild(images[game.img]);
-				images[game.img].src = "images/" + game.img + "_cover.png";
-
-				var div_content = document.createElement("div");
-				div_content.className = "game_content";
-
-				var div_info = document.createElement("div");
-				div_info.className = "game_info";
-				var b_title = document.createElement("b");
-				b_title.className = "game_title";
-				b_title.innerHTML = game.title;
-				var p_desc = document.createElement("p");
-				p_desc.className = "game_desc";
-
-				var desc = game.desc;
-				if (game.desc_links != undefined) {
-					for (var j = 0; j < Object.keys(game.desc_links).length; j++) {
-						var key = Object.keys(game.desc_links)[j];
-						var ind = desc.indexOf(key);
-						var p1 = desc.substr(0, ind);
-						var p2 = desc.substr(ind, key.length);
-						var p3 = desc.substr(ind + key.length);
-
-						desc = p1 + "<a href='" + game.desc_links[key] + "' class='desc_link'>" + p2 + "</a>" + p3;
-					}
-				}
-
-				p_desc.innerHTML = desc;
-
-				var div_links = document.createElement("div");
-				div_links.className = "game_links";
-
-				div_links.appendChild(document.createTextNode("Links: "));
-				for (var j = 0; j < Object.keys(game.links).length; j++) {
-					var key = Object.keys(game.links)[j];
-					var a = document.createElement("a");
-					a.setAttribute("href", game.links[key]);
-					a.innerHTML = key;
-					div_links.appendChild(a);
-					if (j + 1 < Object.keys(game.links).length) {
-						div_links.appendChild(document.createTextNode(String.fromCharCode(160)));
-						div_links.appendChild(document.createTextNode(String.fromCharCode(160)));
-						div_links.appendChild(document.createTextNode(String.fromCharCode(160)));
-					}
-				}
-
-				div_info.appendChild(b_title);
-				div_info.appendChild(p_desc);
-				div_info.appendChild(div_links);
-
-				div_content.appendChild(div_img);
-				div_content.appendChild(div_info);
-				div_game.appendChild(div_content);
-				games.appendChild(document.createElement("hr"));
-				games.appendChild(div_game);
-			}
-		}
-
-		window.onload = loadGames;
-	</script>
 </head>
 
 <body>
-    <div id ="intro">
-        <div class="intro_header">Anheurystics' Portfolio</div>
-        <div class="intro_body">
-            This small website contains links to all the games and prototypes I have worked on.
-        </div>
-        <br/>
-        <div class="intro_header">About Me</div>
-        <div class="intro_body">
-            I'm a hobbyist game developer, graphics programmer, and web developer.
-        </div>
-    </div>
+	<div id="intro">
+		<div class="intro_header">Anheurystics' Portfolio</div>
+		<div class="intro_body">
+			This small website contains links to all the games and prototypes I have worked on.
+		</div>
+		<br/>
+		<div class="intro_header">About Me</div>
+		<div class="intro_body">
+			I'm a hobbyist game developer, graphics programmer, and web developer.
+		</div>
+	</div>
 
 	<div id="games">
-        <div class="intro_header">Games</div>
+		<div class="intro_header">Games</div>
+		<hr>
+		<div class="game">
+			<div class="game_content">
+				<div class="game_img"><img src="images/shootoclock_cover.png"></div>
+				<div class="game_info"><b class="game_title">shoot o' clock</b>
+					<p class="game_desc">An action arcade game (using the terms roughly). Made for Ludum Dare 27, with the theme of "10 seconds".</p>
+					<div class="game_links">Links: <a href="http://gamejolt.com/games/arcade/shoot-o-clock/18337/">GameJolt</a></div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="game">
+			<div class="game_content">
+				<div class="game_img"><img src="images/primaryrun_cover.png"></div>
+				<div class="game_info"><b class="game_title">Primary Run</b>
+					<p class="game_desc">A third person puzzle game with the goal of getting everyone to the exit. Made for Global Game Jam 2014.</p>
+					<div class="game_links">Links: <a href="http://globalgamejam.org/2014/games/primary-run">Global Game Jam Page</a></div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="game">
+			<div class="game_content">
+				<div class="game_img"><img src="images/logicinvaders_cover.png"></div>
+				<div class="game_info"><b class="game_title">Logic Invaders</b>
+					<p class="game_desc">A Space Invader clone using the mechanics of logic gates (AND, OR, etc.). Made for a school project.</p>
+					<div class="game_links">Links: <a href="http://www.kongregate.com/games/will1008/logic-invaders">Kongregate</a></div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="game">
+			<div class="game_content">
+				<div class="game_img"><img src="images/notquitepong_cover.png"></div>
+				<div class="game_info"><b class="game_title">Not Quite Pong</b>
+					<p class="game_desc">A pong clone, but with Flappy Bird-like controls. Made for FlappyJam 2014, hosted by <a href="http://twitter.com/somepx"
+						 class="desc_link">@somepx</a>.</p>
+					<div class="game_links">Links: <a href="http://anheurystics.itch.io/not-quite-pong">itch.io</a>&nbsp;&nbsp;&nbsp;<a href="http://www.kongregate.com/games/will1008/not-quite-pong">Kongregate</a></div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="game">
+			<div class="game_content">
+				<div class="game_img"><img src="images/axepunk_cover.png"></div>
+				<div class="game_info"><b class="game_title">AXE Punk</b>
+					<p class="game_desc">An action platformer. Made for CyberpunkJam 2014, hosted by <a href="http://twitter.com/deviever" class="desc_link">@deviever</a>.</p>
+					<div
+					 class="game_links">Links: <a href="http://anheurystics.itch.io/axe-punk">itch.io</a></div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="game">
+		<div class="game_content">
+			<div class="game_img"><img src="images/awake_cover.png"></div>
+			<div class="game_info"><b class="game_title">Awake</b>
+				<p class="game_desc">A short adventure platformer about disillusionment. Made for LowRezJam 2014, hosted by <a href="http://twitter.com/deviever"
+					 class="desc_link">@deviever</a>.</p>
+				<div class="game_links">Links: <a href="http://gamejolt.com/games/platformer/awake/26840/">GameJolt</a></div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="game">
+		<div class="game_content">
+			<div class="game_img"><img src="images/radialblur_cover.png"></div>
+			<div class="game_info"><b class="game_title">Radial Blur</b>
+				<p class="game_desc">A wave-based shooter. Made for a local "One Year Game Challenge++" 2013-2014, hosted by IGDA Manila.</p>
+				<div class="game_links">Links: <a href="https://play.google.com/store/apps/details?id=com.anheu.rblur">Google Play</a>&nbsp;&nbsp;&nbsp;<a href="http://anheurystics.itch.io/radial-blur">itch.io</a></div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="game">
+		<div class="game_content">
+			<div class="game_img"><img src="images/alonetogether_cover.png"></div>
+			<div class="game_info"><b class="game_title">Alone Together</b>
+				<p class="game_desc">A minimalist puzzle platformer. Made for Ludum Dare 30, with the theme of "Connected Worlds".</p>
+				<div class="game_links">Links: <a href="http://anheurystics.itch.io/alone-together">itch.io</a>&nbsp;&nbsp;&nbsp;<a href="http://gamejolt.com/games/puzzle/alone-together/33161/">GameJolt</a></div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="game">
+		<div class="game_content">
+			<div class="game_img"><img src="images/base10-2_cover.png"></div>
+			<div class="game_info"><b class="game_title">Base 10-2</b>
+				<p class="game_desc">A time-based arithmetic quiz game. Made for the IndieQuilt Jam, hosted by <a href="http://twitter.com/erichermit" class="desc_link">@Erichermit</a>.</p>
+				<div
+				 class="game_links">Links: <a href="http://gamejolt.com/games/arcade/base-10-2/33550/">GameJolt</a></div>
+		</div>
+	</div>
+	</div>
+	<hr>
+	<div class="game">
+		<div class="game_content">
+			<div class="game_img"><img src="images/endgameplus_cover.png"></div>
+			<div class="game_info"><b class="game_title">End Game+</b>
+				<p class="game_desc">A game that deals with the idea of a life after the boss fight. Made for Global Game Jam 2015</p>
+				<div class="game_links">Links: <a href="http://globalgamejam.org/2015/games/end-game">Global Game Jam Page</a></div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="game">
+		<div class="game_content">
+			<div class="game_img"><img src="images/bakersdozen_cover.png"></div>
+			<div class="game_info"><b class="game_title">Baker's Dozen</b>
+				<p class="game_desc">A top down action shooter about shooting cookies at robots. Made for Ludum Dare 32, with the theme of "An Unconventional
+					Weapon".</p>
+				<div class="game_links">Links: <a href="http://ludumdare.com/compo/ludum-dare-32/?action=preview&amp;uid=26198">Ludum Dare page</a></div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="game">
+		<div class="game_content">
+			<div class="game_img"><img src="images/voxelpopulus_cover.png"></div>
+			<div class="game_info"><b class="game_title">Voxel Populus</b>
+				<p class="game_desc">A block-building sandbox game made for a local hackathon, YouthHack Code Weekend</p>
+				<div class="game_links">Links: <a href="http://github.com/Anheurystics/VoxelPopulus">GitHub</a></div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="game">
+		<div class="game_content">
+			<div class="game_img"><img src="images/ourdarklord_cover.png"></div>
+			<div class="game_info"><b class="game_title">Our Dark Lord (is Better than Yours)</b>
+				<p class="game_desc">A competitive PvP first-person game, in which cults race to summon their demon before everyone else. Made for Global
+					Gam Jam 2016.</p>
+				<div class="game_links">Links: <a href="http://globalgamejam.org/2016/games/our-dark-lord-better-yours">Global Game Jam Page</a></div>
+			</div>
+		</div>
+	</div>
 	</div>
 </body>
 
