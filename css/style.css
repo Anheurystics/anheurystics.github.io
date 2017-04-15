@@ -61,6 +61,8 @@ navbar {
 	color: #000000;
 }
 .game_links {
+	font-size: 1.5em;
+	font-weight: 400;
 }
 a:link:not(.navlink) {
 	font-weight: bold;
@@ -70,4 +72,13 @@ a:hover:not(.navlink),
 a:visited:not(.navlink) {
 	font-weight: bold;
 	color: #444444;
+}
+
+@media(max-width: 700px) {
+	.game {
+		flex-direction: column;
+	}
+	.game_img > img{
+		width: 100%;
+	}
 }
