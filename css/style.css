@@ -73,6 +73,22 @@ a:visited:not(.navlink) {
 	font-weight: bold;
 	color: #444444;
 }
+.log_title {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 2em;
+}
+.log_date {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 1.25em;
+}
+.log_body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1.25em;
+}
 
 @media(max-width: 700px) {
 	.game {
