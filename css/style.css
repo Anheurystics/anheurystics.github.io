@@ -23,39 +23,31 @@ navbar {
 	display: inline-block;
 }
 #games {
-	margin-left: auto;
-	margin-right: auto;
 	overflow: hidden;
 	margin: 1em;
 }
 .game {
-	overflow: hidden;
+	display: flex;
+	flex-direction: row;
 	margin: 1em 0 1em 0;
 }
-.game_content {
-	background-color: #ffffff;
-	float: left;
-	width: 100%;
-}
 .game_img {
-	border-spacing: inherit;
-	line-height: 0;
-	float: left;
 	margin-right: 1em;
 }
 .game_info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1.2em;
-	font-weight: 300;
 }
 .game_title {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 1.2em;
+	font-size: 1.5em;
 	font-weight: 400;
 	color: #000000;
 }
 .game_desc {
-	font-size: 1.0em;
+	font-size: 1.5em;
+	font-weight: 300;
 	color: #000000;
 	word-wrap: break-word;
 }
@@ -69,7 +61,6 @@ navbar {
 	color: #000000;
 }
 .game_links {
-		
 }
 a:link:not(.navlink) {
 	font-weight: bold;
