@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,350,400');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400');
 body {
 	background-color: #ffffff;
 }
@@ -51,6 +51,15 @@ navbar {
 	color: #000000;
 	word-wrap: break-word;
 }
+.game_tech {
+	padding: .25em 0 .25em 0;
+}
+.game_tech span {
+	padding: .25em .5em .25em .5em;
+	margin-right: .5em;
+	font-size: 1.25em;
+	background-color: lightgray;
+}
 .desc_link {
 	color: #000000;
 }
@@ -86,10 +95,9 @@ a:visited:not(.navlink) {
 }
 .log_body {
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 400;
+	font-weight: 300;
 	font-size: 1.25em;
 }
-
 @media(max-width: 700px) {
 	.game {
 		flex-direction: column;
