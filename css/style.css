@@ -43,6 +43,7 @@ navbar {
 .game_title {
 	font-size: 1.5em;
 	font-weight: 400;
+	margin-bottom: 0.25em;
 	color: #000000;
 }
 .game_desc {
@@ -53,6 +54,7 @@ navbar {
 }
 .game_tech {
 	padding: .25em 0 .25em 0;
+	margin-bottom: .25em;
 }
 .game_tech span {
 	padding: .25em .5em .25em .5em;
@@ -72,6 +74,7 @@ navbar {
 .game_links {
 	font-size: 1.5em;
 	font-weight: 400;
+	margin-top: 1em;
 }
 a:link:not(.navlink) {
 	font-weight: bold;
