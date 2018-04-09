@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 body {
 	background-color: #ffffff;
 }
@@ -108,3 +108,4 @@ a:visited:not(.navlink) {
 		width: 100%;
 	}
 }
+
