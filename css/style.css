@@ -31,8 +31,10 @@ navbar {
 	flex-direction: row;
 	margin: 1em 0 1em 0;
 }
-.game_img {
-	margin-right: 1em;
+@media not all and (max-width: 700px) {
+	.game_img {
+		margin-right: 1em;
+	}
 }
 .game_info {
 	display: flex;
